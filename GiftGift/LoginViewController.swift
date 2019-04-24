@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnLogin: LoadingButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
     
@@ -71,19 +71,54 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         
-        Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (result, error) in
+        if (validateFields()) {
             
-            if error == nil {
-                self.performUserChange(user: result?.user)
-            } else {
-                print(error!) //criar um alert pra mostrar que deu erro
+            self.btnLogin.showLoading()
+            
+            Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (result, error) in
+                if error == nil {
+                    self.performUserChange(user: result?.user)
+                } else {
+                    self.btnLogin.hideLoading()
+                    print(error!) //criar um alert pra mostrar que deu erro
+                }
             }
-            
         }
         
     }
     
+    func validateFields() -> Bool {
+        
+        if (self.emailTF.text == "") {
+            showAlert(title: "Ops!",message: "Preencha o campo e-mail")
+            return false
+        }
+        
+        if (self.passTF.text?.count ?? 0 < 6) {
+            showAlert(title: "Ops!",message: "Senha precisa ter no mínimo 6 dígitos")
+            return false
+        }
+        
+        if (!isValidEmail(email: self.emailTF.text ?? "")){
+            showAlert(title: "Ops!",message: "Preencha o e-mail corretamente")
+            return false
+        }
+        
+        return true
+    }
     
+    func isValidEmail(email:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: email)
+    }
+    
+    func showAlert(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title ?? "", message: message ?? "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Fechar", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 
     // MARK: - Navigation

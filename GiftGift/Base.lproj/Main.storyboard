@@ -46,7 +46,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GkR-ns-Bj1">
                                         <rect key="frame" x="0.0" y="165" width="318" height="40"/>
@@ -55,9 +55,9 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-o1-4hh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-o1-4hh" customClass="LoadingButton" customModule="GiftGift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="220" width="318" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
@@ -97,10 +97,60 @@
             </objects>
             <point key="canvasLocation" x="-1259" y="624"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="OlL-4D-mz5">
+            <objects>
+                <viewController id="zqe-mP-8rx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WIU-oq-ZIb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DhI-mL-cos"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="3ta-GX-oEI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5X8-3A-p7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="260"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="m8k-T5-aPb">
+            <objects>
+                <viewController id="fzX-82-Bcz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sQG-au-kJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GlM-BL-FTY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="5GF-Pc-zX5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxk-10-AQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="-388"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Msp-1M-1Sa">
+            <objects>
+                <tabBarController id="Aqr-Vs-Ude" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aXY-x2-CmH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fzX-82-Bcz" kind="relationship" relationship="viewControllers" id="pRu-E2-MV0"/>
+                        <segue destination="zqe-mP-8rx" kind="relationship" relationship="viewControllers" id="xQd-qM-RRf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJg-hA-2qL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471" y="-66"/>
+        </scene>
         <!--Contatos-->
         <scene sceneID="h96-4f-BZP">
             <objects>
-                <tableViewController id="9tz-le-oDI" customClass="ContactsTableViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContactsTableViewController" id="9tz-le-oDI" customClass="ContactsTableViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qK8-r3-u6v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +200,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVN-QF-tKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="-72"/>
+            <point key="canvasLocation" x="1190" y="-64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BOR-nU-RI8">
@@ -171,7 +221,7 @@
         <!--Login-->
         <scene sceneID="pZT-vC-zZw">
             <objects>
-                <viewController title="Login" id="rO7-Mx-IkX" customClass="LoginViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="rO7-Mx-IkX" customClass="LoginViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XY0-Wj-bf7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +233,7 @@
                                     <constraint firstAttribute="height" constant="120" id="AwB-ph-JVJ"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5JX-5Y-Yc2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5JX-5Y-Yc2">
                                 <rect key="frame" x="48" y="324" width="318" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ggj-k2-Bf7"/>
@@ -201,7 +251,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjW-T8-yXI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjW-T8-yXI" customClass="LoadingButton" customModule="GiftGift" customModuleProvider="target">
                                 <rect key="frame" x="48" y="444" width="318" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
