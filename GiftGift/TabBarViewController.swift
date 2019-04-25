@@ -1,18 +1,21 @@
 //
-//  HomeViewController.swift
+//  TabBarViewController.swift
 //  GiftGift
 //
-//  Created by Caio Cesar on 05/04/19.
+//  Created by Caio Cesar on 24/04/19.
 //  Copyright © 2019 FIAP. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Teste"
+        
+        
+        self.navigationItem.setHidesBackButton(true, animated:true);
+
         // Do any additional setup after loading the view.
     }
     

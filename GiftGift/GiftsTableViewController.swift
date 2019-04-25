@@ -1,21 +1,20 @@
 //
-//  ContactsTableViewController.swift
+//  GiftsTableViewController.swift
 //  GiftGift
 //
-//  Created by Caio Cesar on 05/04/19.
+//  Created by Caio Cesar on 24/04/19.
 //  Copyright © 2019 FIAP. All rights reserved.
 //
 
 import UIKit
 
-class ContactsTableViewController: UITableViewController {
+class GiftsTableViewController: UITableViewController {
     
-    let sections = ["Rafael", "Diego", "Julio", "Caio Cesar", "Douglas"]
+    let gifts = ["Bicicleta", "Macbook", "Dinheiro", "Nintendo Switch", "Mulher"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,46 +25,33 @@ class ContactsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sections.count
+        return gifts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ContactTableViewCell
-        
-        let contact = self.sections[indexPath.row]
-        cell?.prepare(name: contact)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "giftCell", for: indexPath) as! GiftTableViewCell
 
-        return cell!
+        cell.setupCell(title: self.gifts[indexPath.row])
+        return cell
         
     }
-    
+ 
 
-    
+    /*
     // Override to support conditional editing of the table view.
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        // Return false if you do not want the specified item to be editable.
-//        return true
-//    }
-//    
-//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//        print("oiiiiii")
-//        
-//        let more = UITableViewRowAction(style: .default, title: "Deletar") { action, index in
-//            print("more button tapped")
-//        }
-//        more.backgroundColor = UIColor.red
-//        
-//        return [more]
-//        
-//    }
-    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
 
     /*
     // Override to support editing the table view.

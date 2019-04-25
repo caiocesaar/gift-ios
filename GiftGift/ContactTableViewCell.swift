@@ -12,7 +12,6 @@ class ContactTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleContact: UILabel!
     
-    let contacts = ["Caio","Diego","Rafael","Julio","Douglas"]
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
         self.btnLogin.layer.borderWidth = 1
         self.btnLogin.layer.borderColor = UIColor.black.cgColor
         
+        emailTF.text = "caiocs93@gmail.com"
+        passTF.text = "123456"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +51,7 @@ class LoginViewController: UIViewController {
     
     func showMainScreen(user: User?, animated: Bool = true) {
         print("Indo para a próxima tela")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContactsTableViewController.self)) else {return}
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarController") else {return}
         navigationController?.pushViewController(vc, animated: animated)
     }
     
