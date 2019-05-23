@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        isLogged()
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
@@ -68,28 +69,6 @@ class LoginViewController: UIViewController {
     }
 
     
-    @IBAction func didTapView(_ sender: Any) {
-        self.dismissKeyboard()
-    }
-    
-    @IBAction func login(_ sender: Any) {
-        
-        if (validateFields()) {
-            
-            self.btnLogin.showLoading()
-            
-            Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (result, error) in
-                if error == nil {
-                    self.performUserChange(user: result?.user)
-                } else {
-                    self.btnLogin.hideLoading()
-                    print(error!) //criar um alert pra mostrar que deu erro
-                }
-            }
-        }
-        
-    }
-    
     func validateFields() -> Bool {
         
         if (self.emailTF.text == "") {
@@ -122,17 +101,43 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Fechar", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func isLogged(){
+        if Auth.auth().currentUser != nil {
+            let user = Auth.auth().currentUser
+            self.showMainScreen(user: user,animated: true)
+        }
+    }
 
 
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let backItem = UIBarButtonItem()
         backItem.title = "Voltar"
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being
+    }
+    
+    @IBAction func didTapView(_ sender: Any) {
+        self.dismissKeyboard()
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        
+        if (validateFields()) {
+            
+            self.btnLogin.showLoading()
+            
+            Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (result, error) in
+                if error == nil {
+                    self.performUserChange(user: result?.user)
+                } else {
+                    self.btnLogin.hideLoading()
+                    print(error!) //criar um alert pra mostrar que deu erro
+                }
+            }
+        }
+        
     }
     
 
