@@ -11,6 +11,18 @@ import Firebase
 
 class GiftsTableViewController: UITableViewController {
     
+    let collection = "presentes"
+    var firestoreListener: ListenerRegistration!
+    var firestore: Firestore = {
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = true
+        var firestore = Firestore.firestore()
+        firestore.settings = settings
+        return firestore
+    }()
+    var gifts: [Gift] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -55,17 +67,6 @@ class GiftsTableViewController: UITableViewController {
             firestore.collection("presentes").document(item.id ?? "").delete()
         }
     }
-    
-    let collection = "presentes"
-    var firestoreListener: ListenerRegistration!
-    var firestore: Firestore = {
-        let settings = FirestoreSettings()
-        settings.isPersistenceEnabled = true
-        var firestore = Firestore.firestore()
-        firestore.settings = settings
-        return firestore
-    }()
-    var gifts: [Gift] = []
     
     func listItems() {
         
