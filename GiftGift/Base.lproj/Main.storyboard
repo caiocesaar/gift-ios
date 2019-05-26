@@ -156,14 +156,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caio Cesar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KO-ri-hRt">
-                                <rect key="frame" x="165" y="365" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caio Cesar - RM332350" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KO-ri-hRt">
+                                <rect key="frame" x="113.5" y="365" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rafael Pessoa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IG-Xv-H8o">
-                                <rect key="frame" x="153.5" y="390" width="107" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rafael Pessoa - RM332372" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IG-Xv-H8o">
+                                <rect key="frame" x="102.5" y="390" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -180,12 +180,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yh-lP-9JU">
-                                <rect key="frame" x="192" y="675" width="30" height="30"/>
-                                <state key="normal" title="Sair">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAD-qV-ItG">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
@@ -205,8 +199,6 @@
                             <constraint firstItem="Gxi-dP-o05" firstAttribute="top" secondItem="DhI-mL-cos" secondAttribute="top" constant="100" id="5KX-Eb-Zuu"/>
                             <constraint firstItem="DhI-mL-cos" firstAttribute="bottom" secondItem="MbM-8m-Ow0" secondAttribute="bottom" constant="30" id="6ca-OH-wok"/>
                             <constraint firstItem="8IG-Xv-H8o" firstAttribute="top" secondItem="1KO-ri-hRt" secondAttribute="bottom" constant="4" id="7Le-VC-FYL"/>
-                            <constraint firstItem="gbQ-1I-HsG" firstAttribute="top" secondItem="3yh-lP-9JU" secondAttribute="bottom" constant="16" id="9a2-ZN-DbV"/>
-                            <constraint firstItem="3yh-lP-9JU" firstAttribute="centerX" secondItem="DhI-mL-cos" secondAttribute="centerX" id="Eio-CY-l4t"/>
                             <constraint firstItem="MbM-8m-Ow0" firstAttribute="top" secondItem="gbQ-1I-HsG" secondAttribute="bottom" constant="20" id="I6G-KH-8EM"/>
                             <constraint firstItem="MAD-qV-ItG" firstAttribute="leading" secondItem="DhI-mL-cos" secondAttribute="leading" id="Qdl-Ny-CAK"/>
                             <constraint firstItem="EKx-LQ-tSs" firstAttribute="centerX" secondItem="Gxi-dP-o05" secondAttribute="centerX" id="Rgp-Ol-qHI"/>
@@ -239,20 +231,50 @@
                     </tabBar>
                     <connections>
                         <segue destination="Qvu-FK-NEd" kind="relationship" relationship="viewControllers" id="IJ9-Mj-VAj"/>
-                        <segue destination="zqe-mP-8rx" kind="relationship" relationship="viewControllers" id="vIl-pe-AvA"/>
                         <segue destination="Nch-iP-YjZ" kind="relationship" relationship="viewControllers" id="D5a-rO-oIq"/>
+                        <segue destination="P6V-sh-JQ1" kind="relationship" relationship="viewControllers" id="itA-A7-Bz1"/>
+                        <segue destination="zqe-mP-8rx" kind="relationship" relationship="viewControllers" id="vIl-pe-AvA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CO-NW-1TB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-648" y="-72"/>
         </scene>
+        <!--Ajustes-->
+        <scene sceneID="zQr-Zt-3ZA">
+            <objects>
+                <viewController id="P6V-sh-JQ1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWo-TG-ueY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj4-OV-Xfl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Ajustes" id="8Ot-ac-XGy"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cj4-OV-Xfl" firstAttribute="top" secondItem="eqv-L9-Ppn" secondAttribute="top" id="YUi-IX-eXJ"/>
+                            <constraint firstItem="cj4-OV-Xfl" firstAttribute="leading" secondItem="yWo-TG-ueY" secondAttribute="leading" id="bB1-j1-zGb"/>
+                            <constraint firstItem="eqv-L9-Ppn" firstAttribute="trailing" secondItem="cj4-OV-Xfl" secondAttribute="trailing" id="c40-tu-AtM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eqv-L9-Ppn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" id="uhW-ij-sZc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUn-Jj-uUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="696"/>
+        </scene>
         <!--Lista de Presentes-->
         <scene sceneID="hkf-cc-7jG">
             <objects>
                 <tableViewController title="Lista de Presentes" id="7km-6d-9eD" customClass="GiftsTableViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fBP-Bx-jy2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -323,11 +345,11 @@
             <objects>
                 <viewController storyboardIdentifier="GiftsSingle" id="lgr-uq-M4e" customClass="GiftViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bkf-hQ-u1W" customClass="GiftView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wuh-uR-T0M">
-                                <rect key="frame" x="16" y="156" width="382" height="122"/>
+                                <rect key="frame" x="16" y="16" width="382" height="122"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-xx-ojO">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -350,7 +372,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-U5-Ifu">
-                                <rect key="frame" x="185.5" y="751" width="43" height="30"/>
+                                <rect key="frame" x="185.5" y="611" width="43" height="30"/>
                                 <state key="normal" title="Salvar"/>
                                 <connections>
                                     <action selector="submit:" destination="lgr-uq-M4e" eventType="touchUpInside" id="TBM-TW-S1Y"/>
@@ -391,7 +413,7 @@
             <objects>
                 <navigationController id="Qvu-FK-NEd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lista de Presentes" id="FGO-GS-w5D"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Mv6-Bf-NiQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Mv6-Bf-NiQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
