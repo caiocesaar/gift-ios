@@ -17,18 +17,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
     @IBOutlet weak var btnSignUp: LoadingButton!
-    
-    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         self.btnSignUp.layer.cornerRadius = 5
         self.btnSignUp.layer.borderWidth = 1
         self.btnSignUp.layer.borderColor = UIColor.black.cgColor
-        
     }
     
     @IBAction func didTapSignUpButton(_ sender: Any) {
@@ -107,19 +102,12 @@ class SignUpViewController: UIViewController {
     }
     
     func showLoginScreen() {
-        
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: LoginViewController.self)) else {return}
-        navigationController?.pushViewController(vc, animated: true)
+        self.dismiss(animated: true, completion:  nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapLogin(_ sender: Any) {
+        showLoginScreen()
     }
-    */
+    
 
 }

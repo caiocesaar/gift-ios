@@ -7,87 +7,99 @@
 //
 
 import UIKit
+import Firebase
 
 class GiftsTableViewController: UITableViewController {
     
-    let gifts = ["Bicicleta", "Macbook", "Dinheiro", "Nintendo Switch", "Mulher"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        listItems()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
 
-    // MARK: - Table view data source
-
+    //tableview methods
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return gifts.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "giftCell", for: indexPath) as! GiftTableViewCell
-
-        cell.setupCell(title: self.gifts[indexPath.row])
+        let gift = self.gifts[indexPath.row]
+        cell.setupCell(gift: gift)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = gifts[indexPath.row]
+        performSegue(withIdentifier: "GiftsSingle", sender: item)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    let collection = "presentes"
+    var firestoreListener: ListenerRegistration!
+    var firestore: Firestore = {
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = true
+        var firestore = Firestore.firestore()
+        firestore.settings = settings
+        return firestore
+    }()
+    var gifts: [Gift] = []
+    
+    func listItems() {
         
+        firestoreListener = firestore.collection(collection).order(by: "name", descending: false).addSnapshotListener(includeMetadataChanges: true){ (snapshot, error) in
+            
+            if error != nil {
+                print(error!)
+            }
+            
+            guard let snapshot = snapshot else {return}
+            if snapshot.metadata.isFromCache || snapshot.documentChanges.count > 0 {
+                self.showItems(snapshot: snapshot)
+            }
+            
+        }
     }
  
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func showItems(snapshot: QuerySnapshot) {
+        gifts.removeAll()
+        for document in snapshot.documents {
+            let data = document.data()
+            if let name = data["name"] as? String,
+                let place = data["place"] as? String,
+                let value = data["value"] as? Float {
+                let giftItem = Gift(id: document.documentID, name: name, place: place, value: value)
+                gifts.append(giftItem)
+            }
+        }
+        tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "GiftsSingle" {
+            if let gift = sender as? Gift {
+                if let vc = segue.destination as? GiftViewController {
+                    vc.giftItem = gift
+                }
+            }
+        }
     }
-    */
+    
 
 }

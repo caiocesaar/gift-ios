@@ -7,25 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251F8DE32298D299002ACFF4 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F8DE22298D299002ACFF4 /* Gift.swift */; };
+		251F8DE52298F569002ACFF4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F8DE42298F569002ACFF4 /* MainTabBarViewController.swift */; };
+		251F8DE7229B025F002ACFF4 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F8DE6229B025F002ACFF4 /* GiftViewController.swift */; };
 		2528AFD32258117100863F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528AFD22258117100863F91 /* AppDelegate.swift */; };
 		2528AFD52258117100863F91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528AFD42258117100863F91 /* ViewController.swift */; };
 		2528AFD82258117100863F91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2528AFD62258117100863F91 /* Main.storyboard */; };
 		2528AFDB2258117100863F91 /* GiftGift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2528AFD92258117100863F91 /* GiftGift.xcdatamodeld */; };
 		2528AFDD2258117300863F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2528AFDC2258117300863F91 /* Assets.xcassets */; };
 		2528AFE02258117300863F91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2528AFDE2258117300863F91 /* LaunchScreen.storyboard */; };
-		2528AFEC22581BC600863F91 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528AFEB22581BC600863F91 /* ContactTableViewCell.swift */; };
-		2528AFEE2258264B00863F91 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528AFED2258264B00863F91 /* ContactsTableViewController.swift */; };
 		25348B8A225C0BCC009C5920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25348B89225C0BCC009C5920 /* LoginViewController.swift */; };
 		25348B8C225C18D1009C5920 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25348B8B225C18D1009C5920 /* SignUpViewController.swift */; };
 		2560C18C2270C9900029CDDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2560C18B2270C9900029CDDF /* GoogleService-Info.plist */; };
 		2560C190227120C60029CDDF /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C18F227120C60029CDDF /* LoadingButton.swift */; };
-		2560C1922271342B0029CDDF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C1912271342B0029CDDF /* TabBarViewController.swift */; };
 		2560C1942271409A0029CDDF /* GiftsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C1932271409A0029CDDF /* GiftsTableViewController.swift */; };
 		2560C1962271421A0029CDDF /* GiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C1952271421A0029CDDF /* GiftTableViewCell.swift */; };
 		F2EB17802766948F542347EF /* Pods_GiftGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC1E757EC8B106CFAFE2BD /* Pods_GiftGift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		251F8DE22298D299002ACFF4 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		251F8DE42298F569002ACFF4 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		251F8DE6229B025F002ACFF4 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		2528AFCF2258117100863F91 /* GiftGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2528AFD22258117100863F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2528AFD42258117100863F91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,13 +37,10 @@
 		2528AFDC2258117300863F91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2528AFDF2258117300863F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2528AFE12258117300863F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2528AFEB22581BC600863F91 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
-		2528AFED2258264B00863F91 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		25348B89225C0BCC009C5920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25348B8B225C18D1009C5920 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2560C18B2270C9900029CDDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2560C18F227120C60029CDDF /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
-		2560C1912271342B0029CDDF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		2560C1932271409A0029CDDF /* GiftsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsTableViewController.swift; sourceTree = "<group>"; };
 		2560C1952271421A0029CDDF /* GiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftTableViewCell.swift; sourceTree = "<group>"; };
 		453B0EA0C410B71163158883 /* Pods-GiftGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiftGift.release.xcconfig"; path = "Target Support Files/Pods-GiftGift/Pods-GiftGift.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,19 +84,19 @@
 				2528AFD22258117100863F91 /* AppDelegate.swift */,
 				2528AFD42258117100863F91 /* ViewController.swift */,
 				2528AFD62258117100863F91 /* Main.storyboard */,
+				251F8DE42298F569002ACFF4 /* MainTabBarViewController.swift */,
+				251F8DE6229B025F002ACFF4 /* GiftViewController.swift */,
 				2560C1952271421A0029CDDF /* GiftTableViewCell.swift */,
 				2560C1932271409A0029CDDF /* GiftsTableViewController.swift */,
-				2560C1912271342B0029CDDF /* TabBarViewController.swift */,
 				25348B8B225C18D1009C5920 /* SignUpViewController.swift */,
 				2560C18F227120C60029CDDF /* LoadingButton.swift */,
 				25348B89225C0BCC009C5920 /* LoginViewController.swift */,
-				2528AFED2258264B00863F91 /* ContactsTableViewController.swift */,
-				2528AFEB22581BC600863F91 /* ContactTableViewCell.swift */,
 				2528AFDC2258117300863F91 /* Assets.xcassets */,
 				2528AFDE2258117300863F91 /* LaunchScreen.storyboard */,
 				2528AFE12258117300863F91 /* Info.plist */,
 				2560C18B2270C9900029CDDF /* GoogleService-Info.plist */,
 				2528AFD92258117100863F91 /* GiftGift.xcdatamodeld */,
+				251F8DE22298D299002ACFF4 /* Gift.swift */,
 			);
 			path = GiftGift;
 			sourceTree = "<group>";
@@ -197,16 +197,26 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GiftGift/Pods-GiftGift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,12 +256,12 @@
 				2560C190227120C60029CDDF /* LoadingButton.swift in Sources */,
 				2560C1942271409A0029CDDF /* GiftsTableViewController.swift in Sources */,
 				25348B8A225C0BCC009C5920 /* LoginViewController.swift in Sources */,
+				251F8DE7229B025F002ACFF4 /* GiftViewController.swift in Sources */,
+				251F8DE32298D299002ACFF4 /* Gift.swift in Sources */,
 				2528AFD52258117100863F91 /* ViewController.swift in Sources */,
+				251F8DE52298F569002ACFF4 /* MainTabBarViewController.swift in Sources */,
 				25348B8C225C18D1009C5920 /* SignUpViewController.swift in Sources */,
-				2560C1922271342B0029CDDF /* TabBarViewController.swift in Sources */,
-				2528AFEC22581BC600863F91 /* ContactTableViewCell.swift in Sources */,
 				2560C1962271421A0029CDDF /* GiftTableViewCell.swift in Sources */,
-				2528AFEE2258264B00863F91 /* ContactsTableViewController.swift in Sources */,
 				2528AFD32258117100863F91 /* AppDelegate.swift in Sources */,
 				2528AFDB2258117100863F91 /* GiftGift.xcdatamodeld in Sources */,
 			);

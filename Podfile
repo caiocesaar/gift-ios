@@ -6,11 +6,9 @@ target 'GiftGift' do
   use_frameworks!
 
   # Pods for GiftGift
-
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
-
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 
 end

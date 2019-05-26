@@ -28,17 +28,22 @@ class LoginViewController: UIViewController {
         emailTF.text = "caiocs93@gmail.com"
         passTF.text = "123456"
         
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if let user = user {
+                self.showMainScreen(user: user, animated: false)
+            }
+        })
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        isLogged()
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.isNavigationBarHidden = false
     }
     
     func dismissKeyboard() -> Void{
@@ -51,9 +56,8 @@ class LoginViewController: UIViewController {
     }
     
     func showMainScreen(user: User?, animated: Bool = true) {
-        print("Indo para a próxima tela")
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarController") else {return}
-        navigationController?.pushViewController(vc, animated: animated)
+        present(vc, animated: animated)
     }
     
     func performUserChange(user: User?) {
@@ -102,30 +106,15 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func isLogged(){
-        if Auth.auth().currentUser != nil {
-            let user = Auth.auth().currentUser
-            self.showMainScreen(user: user,animated: true)
-        }
-    }
-
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        let backItem = UIBarButtonItem()
-        backItem.title = "Voltar"
-        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being
-    }
-    
     @IBAction func didTapView(_ sender: Any) {
-        self.dismissKeyboard()
+        dismissKeyboard()
     }
     
     @IBAction func login(_ sender: Any) {
         
         if (validateFields()) {
-            
+
+            removeListener()
             self.btnLogin.showLoading()
             
             Auth.auth().signIn(withEmail: emailTF.text!, password: passTF.text!) { (result, error) in
@@ -139,6 +128,5 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
 
 }
