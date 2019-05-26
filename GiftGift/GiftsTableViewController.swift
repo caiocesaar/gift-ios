@@ -49,6 +49,13 @@ class GiftsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let item = gifts[indexPath.row]
+            firestore.collection("presentes").document(item.id ?? "").delete()
+        }
+    }
+    
     let collection = "presentes"
     var firestoreListener: ListenerRegistration!
     var firestore: Firestore = {
