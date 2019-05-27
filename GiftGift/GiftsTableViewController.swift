@@ -22,6 +22,8 @@ class GiftsTableViewController: UITableViewController {
     }()
     var gifts: [Gift] = []
     
+    let settings = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,20 @@ class GiftsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         listItems()
+        
+        
+        if settings.bool(forKey: "dark") == true {
+            UINavigationBar.appearance().barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            UINavigationBar.appearance().tintColor = UIColor.white
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        } else {
+            UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+            UINavigationBar.appearance().tintColor = UIColor.black
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+        }
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

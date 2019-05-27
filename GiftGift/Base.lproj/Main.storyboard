@@ -186,8 +186,8 @@
                                     <navigationItem title="Sobre" id="QVm-wI-lQh"/>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="Gxi-dP-o05">
-                                <rect key="frame" x="157" y="154" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="Gxi-dP-o05">
+                                <rect key="frame" x="157" y="144" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LFc-Ud-fYl"/>
                                     <constraint firstAttribute="height" constant="100" id="agC-Kh-Rxp"/>
@@ -243,7 +243,7 @@
         <!--Ajustes-->
         <scene sceneID="zQr-Zt-3ZA">
             <objects>
-                <viewController id="P6V-sh-JQ1" sceneMemberID="viewController">
+                <viewController id="P6V-sh-JQ1" customClass="SettingsViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yWo-TG-ueY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,16 +254,36 @@
                                     <navigationItem title="Ajustes" id="8Ot-ac-XGy"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ativar modo escuro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWu-ty-6gG">
+                                <rect key="frame" x="16" y="104" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-6K-pxE">
+                                <rect key="frame" x="349" y="99" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didTapUpdate:" destination="P6V-sh-JQ1" eventType="valueChanged" id="8Kh-sT-HPA"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zi6-6K-pxE" firstAttribute="centerY" secondItem="PWu-ty-6gG" secondAttribute="centerY" id="01M-0W-KeG"/>
+                            <constraint firstItem="eqv-L9-Ppn" firstAttribute="trailing" secondItem="zi6-6K-pxE" secondAttribute="trailing" constant="16" id="9eU-AA-6CS"/>
                             <constraint firstItem="cj4-OV-Xfl" firstAttribute="top" secondItem="eqv-L9-Ppn" secondAttribute="top" id="YUi-IX-eXJ"/>
                             <constraint firstItem="cj4-OV-Xfl" firstAttribute="leading" secondItem="yWo-TG-ueY" secondAttribute="leading" id="bB1-j1-zGb"/>
+                            <constraint firstItem="zi6-6K-pxE" firstAttribute="leading" secondItem="PWu-ty-6gG" secondAttribute="trailing" constant="16" id="bqs-QG-RPW"/>
                             <constraint firstItem="eqv-L9-Ppn" firstAttribute="trailing" secondItem="cj4-OV-Xfl" secondAttribute="trailing" id="c40-tu-AtM"/>
+                            <constraint firstItem="PWu-ty-6gG" firstAttribute="leading" secondItem="eqv-L9-Ppn" secondAttribute="leading" constant="16" id="kRH-l2-QsZ"/>
+                            <constraint firstItem="PWu-ty-6gG" firstAttribute="top" secondItem="cj4-OV-Xfl" secondAttribute="bottom" constant="16" id="n73-rk-3vj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eqv-L9-Ppn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" id="uhW-ij-sZc"/>
+                    <connections>
+                        <outlet property="switchButton" destination="zi6-6K-pxE" id="9If-M8-kpw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUn-Jj-uUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,7 +431,7 @@
         <!--Lista de Presentes-->
         <scene sceneID="Kpy-Gy-XMN">
             <objects>
-                <navigationController id="Qvu-FK-NEd" sceneMemberID="viewController">
+                <navigationController id="Qvu-FK-NEd" customClass="CustomUINavigationViewController" customModule="GiftGift" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lista de Presentes" id="FGO-GS-w5D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Mv6-Bf-NiQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

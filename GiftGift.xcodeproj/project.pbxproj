@@ -23,6 +23,8 @@
 		2560C190227120C60029CDDF /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C18F227120C60029CDDF /* LoadingButton.swift */; };
 		2560C1942271409A0029CDDF /* GiftsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C1932271409A0029CDDF /* GiftsTableViewController.swift */; };
 		2560C1962271421A0029CDDF /* GiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560C1952271421A0029CDDF /* GiftTableViewCell.swift */; };
+		25F72812229B83B4009DBA6A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F72811229B83B4009DBA6A /* SettingsViewController.swift */; };
+		25F72814229B851E009DBA6A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25F72813229B851E009DBA6A /* Settings.bundle */; };
 		F2EB17802766948F542347EF /* Pods_GiftGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FC1E757EC8B106CFAFE2BD /* Pods_GiftGift.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		2560C18F227120C60029CDDF /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		2560C1932271409A0029CDDF /* GiftsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsTableViewController.swift; sourceTree = "<group>"; };
 		2560C1952271421A0029CDDF /* GiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftTableViewCell.swift; sourceTree = "<group>"; };
+		25F72811229B83B4009DBA6A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		25F72813229B851E009DBA6A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		453B0EA0C410B71163158883 /* Pods-GiftGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiftGift.release.xcconfig"; path = "Target Support Files/Pods-GiftGift/Pods-GiftGift.release.xcconfig"; sourceTree = "<group>"; };
 		5F292478CC354FB9F7BCEDE7 /* Pods-GiftGift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiftGift.debug.xcconfig"; path = "Target Support Files/Pods-GiftGift/Pods-GiftGift.debug.xcconfig"; sourceTree = "<group>"; };
 		86FC1E757EC8B106CFAFE2BD /* Pods_GiftGift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiftGift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,8 @@
 				2528AFD22258117100863F91 /* AppDelegate.swift */,
 				2528AFD42258117100863F91 /* ViewController.swift */,
 				2528AFD62258117100863F91 /* Main.storyboard */,
+				25F72813229B851E009DBA6A /* Settings.bundle */,
+				25F72811229B83B4009DBA6A /* SettingsViewController.swift */,
 				251F8DE8229B16AF002ACFF4 /* MapViewController.swift */,
 				251F8DE42298F569002ACFF4 /* MainTabBarViewController.swift */,
 				251F8DE6229B025F002ACFF4 /* GiftViewController.swift */,
@@ -183,6 +189,7 @@
 			files = (
 				2528AFE02258117300863F91 /* LaunchScreen.storyboard in Resources */,
 				2560C18C2270C9900029CDDF /* GoogleService-Info.plist in Resources */,
+				25F72814229B851E009DBA6A /* Settings.bundle in Resources */,
 				2528AFDD2258117300863F91 /* Assets.xcassets in Resources */,
 				2528AFD82258117100863F91 /* Main.storyboard in Resources */,
 			);
@@ -266,6 +273,7 @@
 				251F8DE9229B16AF002ACFF4 /* MapViewController.swift in Sources */,
 				25348B8C225C18D1009C5920 /* SignUpViewController.swift in Sources */,
 				2560C1962271421A0029CDDF /* GiftTableViewCell.swift in Sources */,
+				25F72812229B83B4009DBA6A /* SettingsViewController.swift in Sources */,
 				2528AFD32258117100863F91 /* AppDelegate.swift in Sources */,
 				2528AFDB2258117100863F91 /* GiftGift.xcdatamodeld in Sources */,
 			);
